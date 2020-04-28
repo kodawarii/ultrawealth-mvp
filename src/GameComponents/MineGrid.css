@@ -1,0 +1,9 @@
+.MineGrid{
+    display: inline-block;
+}
+
+.MineGrid-wrapper{
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-gap: 8px;
+}
