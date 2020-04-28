@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 import './TitleNav.css';
 
-export default class TitleNav extends Component  {
-  render(){
+// Use Stateless Function for Title and Nav Ribbon
+function TitleNav() {
     return (
       <div className="TitleNav">   
         <div className="wrapper"> 
@@ -11,7 +11,7 @@ export default class TitleNav extends Component  {
                 <div></div>
             </div>
             <div className="col Title"> 
-                <div> U L T R A  W E A L T H ({this.props.page})  </div>
+                <div> U L T R A  W E A L T H </div>
             </div>
             <div className="col MenuBtn"> 
                 <div> ☰ </div>
@@ -19,5 +19,5 @@ export default class TitleNav extends Component  {
         </div>     
       </div>
     );
-  }
 }
+export default TitleNav;

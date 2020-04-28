@@ -11,7 +11,6 @@ export default class Main extends Component  {
         <TitleNav page={"Main"}/>
         <DataDisplay />
         <MineGrid />
-        Main Screen Component Works
       </div>
     );
   }
