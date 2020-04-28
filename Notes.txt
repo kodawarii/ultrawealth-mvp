@@ -1,0 +1,5 @@
+Update Node: 
+	npm install npm@latest -g
+Use Latest React: 
+	npm uninstall -g create-react-app
+	npx create-react-app my-app
