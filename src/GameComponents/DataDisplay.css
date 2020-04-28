@@ -1,7 +1,6 @@
 .DataDisplay{
     margin: 50px 0 50px 0;
     padding: 12px;
-    border: 1px solid red;
 }
 
 .btn-inventory{
@@ -12,4 +11,8 @@
   border: 2px solid rgb(163, 163, 163);
   border-radius: 8px;
   cursor: pointer;
+}
+
+.cash, .inventory{
+  padding: 4px 0px 4px 0px;
 }

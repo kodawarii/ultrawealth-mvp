@@ -1,7 +1,3 @@
-.TitleNav{
-    border: 1px solid lime;
-}
-
 .wrapper {
     display: grid;
     grid-template-columns: 25vw 50vw 25vw;
