@@ -1,0 +1,21 @@
+.AddCell{
+    height: 80px; 
+    width: 80px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.AddCellWrapper{
+    height: 50px; 
+    width: 50px;
+    display: inline-block;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 50%;
+}
+
+.thePlus{
+    color: rgba(0, 0, 0, 0.336);
+    font-size: 28px;
+    font-weight: bold;
+}

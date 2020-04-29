@@ -14,3 +14,40 @@
     text-align: right;
     font-size: 26px;
 }
+
+.hamburger{
+    float: right;
+    transition: transform 0.25s linear;
+}
+
+.hamburger:hover{
+    animation: MenuAnimation 0.3s;
+    opacity: 0.25;
+    transform: scale(0.8) rotate(90deg);
+}
+
+.Title:hover{
+    animation: TitleAnimation 0.3s;
+}
+
+@keyframes TitleAnimation {
+    0%{
+        opacity: 0;
+        -webkit-transform:scale(2,2); 
+        
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes MenuAnimation {
+    0%{
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    100%{
+        opacity: 0.25;
+        transform: scale(0.8) rotate(90deg);
+    }
+}

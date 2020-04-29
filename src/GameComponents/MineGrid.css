@@ -4,6 +4,6 @@
 
 .MineGrid-wrapper{
     display: grid;
-    grid-template-columns: 70px 70px 70px 70px;
-    grid-gap: 8px;
+    grid-template-columns: 90px 90px 90px 90px;
+    grid-gap: 12px 4px;
 }

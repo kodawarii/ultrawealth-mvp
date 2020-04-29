@@ -1,12 +1,37 @@
 import React, {Component} from 'react';
 
+import CellState0 from './CellState0.Component';
+import CellState1 from './CellState1.Component';
+import CellState2 from './CellState2.Component';
+import CellState3 from './CellState3.Component';
+
 import './Cell.css';
 
 export default class Cell extends Component  {
   render(){
+    let cell;
+
+    switch(this.props.data.state){
+      case 0:
+        cell = <CellState0 data = {this.props.data} />
+        break;
+      case 1:
+        cell = <CellState1 data = {this.props.data} />
+        break;
+      case 2:
+        cell = <CellState2 data = {this.props.data} />
+        break;
+      case 3:
+        cell = <CellState3 data = {this.props.data} />
+        break;
+      default:
+        console.log("> That State does not exist");
+        break;
+    }
+
     return (
-      <div className="example"> 
-        WOOD 
+      <div className="Cell"> 
+        {cell}
       </div>
     );
   }

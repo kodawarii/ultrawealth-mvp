@@ -14,10 +14,11 @@ function TitleNav() {
                 <div> U L T R A  W E A L T H </div>
             </div>
             <div className="col MenuBtn"> 
-                <div> ☰ </div>
+                <div className="hamburger"> ☰ </div>
             </div>
         </div>     
       </div>
     );
 }
+
 export default TitleNav;

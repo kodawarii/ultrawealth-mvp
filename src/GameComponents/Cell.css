@@ -1,6 +1,8 @@
-.example{
-    border: 1px solid lime;
-    height: 64px; 
-    width: 64px;
+.Cell{
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    height: 80px; 
+    width: 80px;
+    color: rgb(128, 128, 128);
     font-size: 10px;
+    font-weight: bold;
 }
