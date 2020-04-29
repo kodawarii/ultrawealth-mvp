@@ -1,18 +1,36 @@
 .DataDisplay{
-    margin: 50px 0 50px 0;
+    margin: 30px 0 40px 0;
     padding: 12px;
 }
 
-.btn-inventory{
+.DataDisplay-1Data-ul, .DataDisplay-2Buttons-ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 8px;
+}
+
+.DataDisplay-btn{
   background: none;
   padding: 4px 8px 4px 8px;
   outline: none;
   color: rgb(129, 129, 129);
-  border: 2px solid rgb(163, 163, 163);
-  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.432);
   cursor: pointer;
 }
 
-.cash, .inventory{
-  padding: 4px 0px 4px 0px;
+.cash{
+  width: 200px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+}
+
+.DataDisplay-Figure{
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.DataDisplay-Figure2{
+  color: green;
+  font-weight: bold;
+  font-size: 10px;
 }
