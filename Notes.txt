@@ -9,4 +9,12 @@ https://levelup.gitconnected.com/10-ways-to-center-a-div-horizontally-and-vertic
  - Flex
  - Grid
  
- 
+ Deploy to gh-pages:
+	- npm install gh-pages --save-dev
+	- Add to package.json: "homepage": "https://kodawarii.github.io/ultrawealth-mvp"
+	- Add to scripts:
+	"predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+	
+	- npm run deploy
+	- If needed, go to repo > Settings > GitHub Pages > Source > gh-pages branch
