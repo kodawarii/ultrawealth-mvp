@@ -6,10 +6,22 @@ export default class CellState1 extends Component  {
   render(){
     return (
       <div className="CellState1"> 
-        <div className="CellState1-Type"> {this.props.data.state} </div>
-        <div className="CellState1-Img">  gif  </div>
-        <div className="CellState1-Status"> MINING {this.props.data.progress}% </div>
-        <div className="CellState1-Info"> FOUND: {this.props.data.found} </div>
+        <div className="CellState1-Type"> {this.props.data.type} </div>
+
+        <div className="CellState1-Status">
+          <div className="progressCircle-Outer-Animation">
+            <div className="progressCircle"> 
+              <div className="CellState1-progressText"> {this.props.data.progress}% </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="CellState1-Info"> 
+          <div className="CellState1-foundText"> 
+            <span className="CellState1-foundText1"> FOUND </span> 
+            <span className="CellState1-foundText2"> {this.props.data.found} </span>
+          </div>
+        </div>
       </div>
     );
   }

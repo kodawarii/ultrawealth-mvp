@@ -3,3 +3,10 @@ Update Node:
 Use Latest React: 
 	npm uninstall -g create-react-app
 	npx create-react-app my-app
+
+How to Horizontally and Vertically align div inside a div:
+https://levelup.gitconnected.com/10-ways-to-center-a-div-horizontally-and-vertically-in-css-53ca5eb912db
+ - Flex
+ - Grid
+ 
+ 

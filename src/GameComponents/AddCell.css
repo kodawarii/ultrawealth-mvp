@@ -14,8 +14,30 @@
     border-radius: 50%;
 }
 
+.AddCellWrapper:hover{
+    cursor: pointer;
+    animation: PlusHoverAnimationFull 0.8s infinite;
+}
+
 .thePlus{
     color: rgba(0, 0, 0, 0.336);
     font-size: 28px;
     font-weight: bold;
+}
+
+@keyframes PlusHoverAnimationFull {
+    0%{
+        border: 1px solid rgba(233, 233, 233, 0);
+        transform: scale(1,1);
+    }
+    50%{
+        border: 1px solid rgb(233, 233, 233);
+    }
+    80%{
+        border: 1px solid rgba(233, 233, 233, 0);
+    }
+    100%{
+        border: 1px solid rgba(233, 233, 233, 0);
+        transform: scale(1.4,1.4);
+    }
 }

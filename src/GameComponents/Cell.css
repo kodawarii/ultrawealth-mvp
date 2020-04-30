@@ -1,8 +1,115 @@
 .Cell{
     border: 1px solid rgba(0, 0, 0, 0.185);
-    height: 80px; 
+    height: 90px; 
     width: 80px;
     color: rgb(128, 128, 128);
     font-size: 10px;
     font-weight: bold;
 }
+
+/* State0 Styles */
+.StartBtn{
+    background: none;
+    outline: none;
+    height: 56px;
+    width: 56px;
+    color: rgb(129, 129, 129);
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* State1 Styles */
+.CellState1-Status{
+
+    /* Centering div within div vert and horz by Flex */
+    display: flex; /* 1 in father div */
+    justify-content: center; /* 2 in father div */
+    align-items: center; /* 3 in father div */
+}
+
+.progressCircle-Outer-Animation{
+    height: 48px;
+    width: 48px;
+    border: 1px solid rgba(0, 153, 255, 0.562);
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px rgba(1, 162, 255, 0.377);
+
+    animation: Pulsate 2s infinite;
+
+    display: flex; /* 1 */
+    justify-content: center; /* 2 */
+    align-items: center; /* 3 */
+}
+
+.progressCircle{
+    height: 36px;
+    width: 36px;
+    border: 4px solid rgba(0, 255, 149, 0.678);
+    border-radius: 50%;
+
+    display: flex; /* 1 */
+    justify-content: center; /* 2 */
+    align-items: center; /* 3 */
+}
+
+.CellState1-foundText{
+    transform: scale(0.8, 0.8);
+}
+
+.CellState1-foundText2{
+    color: rgba(0, 255, 149, 0.678);
+}
+
+@keyframes Pulsate{
+    0%{
+        border: 1px solid rgba(0, 153, 255, 0.192);
+    }
+    50%{
+        border: 1px solid rgba(0, 153, 255, 0.562);
+    }
+    100%{
+        border: 1px solid rgba(0, 153, 255, 0.192);
+    }
+}
+
+/* State2 Styles */
+.CellState2-Status{
+
+    /* Centering div within div vert and horz by Grid */
+    display: grid; /* 1. father has grid */
+}
+
+.progressCircle2{
+    height: 36px;
+    width: 36px;
+    border: 5px solid rgba(0, 255, 149, 0.678);
+    border-radius: 50%;
+
+    align-self: center; /* 2.a. Child */
+    justify-self: center; /* 2.b. Child */
+
+    display: grid; /* 3. father has grid */
+}
+
+.CellState2-progressText{
+    align-self: center; /* 4.a. Child */
+    justify-self: center; /* 4.b. Child */
+}
+
+.CellState2-Info{
+    padding-top: 4px;
+}
+
+.CellState2-collectText{
+    color: rgb(255, 255, 255);
+    transform: scale(0.8, 0.8);
+    border-radius: 8px;
+    background-color: rgba(0, 172, 29, 0.719);
+}
+
+.CellState2-collectText2{
+    color: rgb(0, 0, 0);
+}
+
+/* State3 Styles */
