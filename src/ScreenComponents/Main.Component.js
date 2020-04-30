@@ -14,6 +14,7 @@ export default class Main extends Component  {
         
         <DataDisplay 
         cash={this.props.userdata.cash}
+        openInventory={this.props.openInventory}
         />
         
         <MineGrid 

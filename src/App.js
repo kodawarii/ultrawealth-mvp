@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
 
 import Main from './ScreenComponents/Main.Component';
 import Inventory from './ScreenComponents/Inventory.Component';
@@ -37,8 +36,9 @@ export default class App extends Component  {
 
     //// Mocking a mining scenario
     for (let i = 0; i <= 100; i++) {
-        if (i !== 0) await sleep(1000);
+        if (i !== 0) await sleep(10); //@TODO Random Time Range for WOOD
         currUserData.cellsOpen[index].progress = i;
+        currUserData.cellsOpen[index].found = i*8; // @TODO Random Num Range for WOOD
         this.setState({userdata: currUserData});
     }
 
@@ -60,6 +60,10 @@ export default class App extends Component  {
     this.setState({userdata: currUserData});
   }
 
+  openInventory(){
+    console.log("Inventory Open");
+  }
+
   render(){
     return (
       <div className="App">
@@ -71,6 +75,8 @@ export default class App extends Component  {
             component={ 
               () => 
               <Main 
+              openInventory={this.openInventory.bind(this)}
+
               userdata={this.state.userdata} 
               addCell={this.addCell.bind(this)} 
               start={this.start.bind(this)} 

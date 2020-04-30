@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import './DataDisplay.css';
 
@@ -6,7 +7,11 @@ export default class DataDisplay extends Component  {
 
   numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  }
+
+  openInventory(){
+    this.props.openInventory();
+  }
 
   render(){
     return (
@@ -22,7 +27,7 @@ export default class DataDisplay extends Component  {
         </div>        
         <div className="DataDisplay-2Buttons">
           <ul className="DataDisplay-2Buttons-ul">
-            <li><button className="DataDisplay-btn"> Inventory </button></li>
+            <li><Link to={'/inventory'}><button className="DataDisplay-btn" onClick={this.openInventory.bind(this)}> Inventory </button></Link></li>
             <li><button className="DataDisplay-btn"> Equips </button></li>
             <li><button className="DataDisplay-btn"> Assets </button></li>
             <li><button className="DataDisplay-btn"> SHOP </button></li>
