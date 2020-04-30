@@ -21,8 +21,11 @@ export default class App extends Component  {
     }
   }
 
-  async start(index){
+  async start(index, price){
     let currUserData = this.state.userdata;
+
+    // Pay price to do a mining job
+    currUserData.cash -= price;
 
     // Mining state so set to state 1
     currUserData.cellsOpen[index].state = 1;

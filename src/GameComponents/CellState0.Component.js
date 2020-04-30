@@ -5,7 +5,7 @@ import './Cell.css';
 export default class CellState0 extends Component  {
 
   start(){
-    this.props.start(this.props.index);
+    this.props.start(this.props.index, 1000);
   }
 
   render(){
