@@ -5,8 +5,12 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 import Main from './ScreenComponents/Main.Component';
 import Inventory from './ScreenComponents/Inventory.Component';
+
+// Mock Data
 import getUserData from './MockData/user1';
 import getUserData2 from './MockData/user2';
+import mine1 from './MockData/mining1';
+import mine2 from './MockData/mining2';
 
 export default class App extends Component  {
   constructor(props){
@@ -17,11 +21,26 @@ export default class App extends Component  {
     }
   }
 
-  start(index){
+  async start(index){
     let currUserData = this.state.userdata;
 
+    // Mining state so set to state 1
     currUserData.cellsOpen[index].state = 1;
+     
+    //// Support Function for mock scenario
+    let sleep = (ms) => {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
+    //// Mocking a mining scenario
+    for (let i = 0; i <= 100; i++) {
+        if (i !== 0) await sleep(1000);
+        currUserData.cellsOpen[index].progress = i;
+        this.setState({userdata: currUserData});
+    }
+
+    // Finnished mining so set state to 2
+    currUserData.cellsOpen[index].state = 2;
     this.setState({userdata: currUserData});
   }
 
