@@ -24,8 +24,8 @@ export default class CellState2 extends Component  {
           </div>
 
           <div className="CellState2-Info"> 
-            <div className="CellState2-collectText"> 
-              <span className="CellState2-collectText1" onClick={this.collectItems.bind(this)}> COLLECT </span> 
+            <div className="CellState2-collectText" onClick={this.collectItems.bind(this)}> 
+              <span className="CellState2-collectText1"> COLLECT </span> 
               <span className="CellState2-collectText2"> {this.props.data.found} </span>
             </div>
           </div>
