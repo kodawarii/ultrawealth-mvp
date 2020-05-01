@@ -3,6 +3,8 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 import './DataDisplay.css';
 
+//@TODO: Move buttons out into separate component, makes no sense to have it within DataDisplay component
+
 export default class DataDisplay extends Component  {
 
   numberWithCommas(x) {

@@ -1,0 +1,15 @@
+.BannerTitle{
+    margin: 50px 0 20px 0;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.40);
+}
+
+.BannerTitle-ul{
+    list-style: none;
+}
+
+.BannerTitle-ul li{
+    transform: scale(0.6, 0.6);
+    display: inline-block;
+    padding: 0 8px 0 8px;
+}

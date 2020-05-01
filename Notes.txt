@@ -10,6 +10,7 @@ https://levelup.gitconnected.com/10-ways-to-center-a-div-horizontally-and-vertic
  - Grid
  
  Deploy to gh-pages:
+ https://blog.usejournal.com/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e
 	- npm install gh-pages --save-dev
 	- Add to package.json: "homepage": "https://kodawarii.github.io/ultrawealth-mvp"
 	- Add to scripts:

@@ -9,6 +9,10 @@
     padding: 10px;
 }
 
+.Title a{
+    text-decoration: none;
+}
+
 .MenuBtn{
     padding-right: 20px;
     text-align: right;

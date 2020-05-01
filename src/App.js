@@ -51,7 +51,7 @@ export default class App extends Component  {
     let currUserData = this.state.userdata;
 
     currUserData.cellsOpen.push({
-      type: "wood",
+      type: "GOLD",
       state: 0,
       progress: 0,
       found: 0
