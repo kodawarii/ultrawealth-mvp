@@ -13,7 +13,9 @@ export default class MineGrid extends Component  {
         data={cellData} 
         key={i}
         index={i}
-        start={this.props.start} />;
+        start={this.props.start} 
+        collectItems={this.props.collectItems}
+        />;
     });
   }
 

@@ -4,6 +4,10 @@ import './Cell.css';
 
 export default class CellState0 extends Component  {
 
+  // this.props.data.{type, state, progress, found}
+  // this.props.index
+  // this.props.start
+
   start(){
     this.props.start(this.props.index, 1000);
   }

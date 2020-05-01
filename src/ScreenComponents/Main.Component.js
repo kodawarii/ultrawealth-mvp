@@ -21,6 +21,7 @@ export default class Main extends Component  {
         cellsOpen={this.props.userdata.cellsOpen} 
         addCell={this.props.addCell} 
         start={this.props.start}
+        collectItems={this.props.collectItems}
         />
 
       </div>

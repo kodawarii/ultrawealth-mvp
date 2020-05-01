@@ -64,6 +64,23 @@ export default class App extends Component  {
     console.log("Inventory Open");
   }
 
+  collectItems(index, name, value){
+    // Add value to inventory items to that item, 'name'
+    let currUserData = this.state.userdata;
+    let currUserItems = currUserData.items;
+
+    for(let i = 0; i < currUserItems.length; i++){
+      if(currUserItems[i].id === name) currUserItems[i].quantity += value;
+    }
+
+    // Reset index cell to state 0
+    let currUserCellsOpen = currUserData.cellsOpen;
+    currUserCellsOpen[index].state = 0;
+
+    // Update App state with new user details
+    this.setState({userdata: currUserData});
+  }
+
   render(){
     return (
       <div className="App">
@@ -79,7 +96,8 @@ export default class App extends Component  {
 
               userdata={this.state.userdata} 
               addCell={this.addCell.bind(this)} 
-              start={this.start.bind(this)} 
+              start={this.start.bind(this)}
+              collectItems={this.collectItems.bind(this)} 
               /> 
             } 
             />

@@ -25,7 +25,7 @@ export default class Cell extends Component  {
         cell = <CellState1 data={this.props.data} />
         break;
       case 2:
-        cell = <CellState2 data={this.props.data} />
+        cell = <CellState2 data={this.props.data} index={this.props.index} collectItems={this.props.collectItems} />
         break;
       case 3:
         cell = <CellState3 data={this.props.data} />
