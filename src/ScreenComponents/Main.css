@@ -1,0 +1,15 @@
+.HideMainComponents{
+    display: none;
+}
+
+.HideAddMenuComponent{
+    display: none;
+}
+
+.MainComponents{
+    display: block;
+}
+
+.AddMenuComponent{
+    display: block;
+}

@@ -7,6 +7,9 @@ import './DataDisplay.css';
 
 export default class DataDisplay extends Component  {
 
+  // this.props.cash
+  // this.props.openInventory
+
   numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }

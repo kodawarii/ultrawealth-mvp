@@ -47,15 +47,17 @@ export default class App extends Component  {
     this.setState({userdata: currUserData});
   }
 
-  addCell(){
+  addCell(data){
     let currUserData = this.state.userdata;
 
     currUserData.cellsOpen.push({
-      type: "GOLD",
+      type: data.id,
       state: 0,
       progress: 0,
       found: 0
     });
+
+    currUserData.cash -= data.price;
     
     this.setState({userdata: currUserData});
   }
@@ -95,9 +97,9 @@ export default class App extends Component  {
               openInventory={this.openInventory.bind(this)}
 
               userdata={this.state.userdata} 
-              addCell={this.addCell.bind(this)} 
               start={this.start.bind(this)}
-              collectItems={this.collectItems.bind(this)} 
+              collectItems={this.collectItems.bind(this)}
+              addCell={this.addCell.bind(this)} 
               /> 
             } 
             />

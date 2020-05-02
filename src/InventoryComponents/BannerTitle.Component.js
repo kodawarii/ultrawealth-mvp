@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 
 import './BannerTitle.css';
 
-export default class BannerTitle extends Component  {
-  render(){
+export default function BannerTitle() {
     return (
       <div className="BannerTitle">
         <ul className="BannerTitle-ul">
@@ -18,6 +17,5 @@ export default class BannerTitle extends Component  {
             <li className="BannerTitle-letter">Y</li>
         </ul>
       </div>
-    );
-  }
+    ); 
 }

@@ -1,0 +1,19 @@
+.asset-row{
+    display: grid;
+    grid-template-columns: 25% 45% 10% 20%;
+    padding: 0 0 8px 0;
+}
+
+.asset-row-material{
+    
+}
+
+.asset-row-estate{
+    
+}
+
+.AddAssetButton{
+    padding: 0 8px 0 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+}

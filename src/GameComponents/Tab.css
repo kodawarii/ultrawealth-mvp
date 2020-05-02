@@ -1,0 +1,14 @@
+.assetList{
+    /* display: none; */
+}
+
+
+.assetListHeader{
+    display: grid;
+    grid-template-columns: 25% 45% 10% 20%;
+}
+
+.asset-row-header{
+    font-weight: bold;
+    transform: scale(0.4, 0.4);
+}

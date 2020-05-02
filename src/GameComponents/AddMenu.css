@@ -1,0 +1,57 @@
+.AddMenu{
+    display: inline-block;
+    width: 300px;
+    margin: 30px 20px 30px 20px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+
+    Animation: OpenAddMenu 1s;
+}
+
+@keyframes OpenAddMenu{
+    0%{
+        opacity: 0;
+        transform:translate(0,-20px); 
+        
+    }
+    100%{
+        opacity: 100;
+        transform:translate(0,-0);
+    }
+}
+
+.top{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.title{
+    display: inline-block;
+}
+
+.exit{
+
+}
+
+.mid{
+    margin: 8px;
+}
+
+.tab{
+    margin: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-gap: 4px;
+}
+
+.skill{
+    
+}
+
+.dropdownArrow{
+    
+}

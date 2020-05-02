@@ -7,7 +7,7 @@ export default class AddCell extends Component{
     return (
       <div className="AddCell">   
         <div className="AddCellWrapper"> 
-          <div className="thePlus" onClick={this.props.addCell}> + </div>
+          <div className="thePlus" onClick={this.props.openAddMenu} > + </div>
         </div>
       </div>
     );

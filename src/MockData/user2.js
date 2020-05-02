@@ -4,10 +4,12 @@ function getUserData2(){
         cash: 8000,
         level: 1,
         cellsOpen: [],
-        items: []
+        items: [],
+        assets: []
     };
 
     data.items = getMockItems();
+    data.assets = getMockAssets();
 
     return data;
 }
@@ -53,6 +55,40 @@ function getMockItems(){
     temp.push({
         id: "NFLX",
         quantity: "890k"
+    });
+
+    return temp;
+}
+
+function getMockAssets(){
+    let temp = [];
+
+    temp.push({
+        type: "material",
+        id: "GLD",
+        cost: 200,
+        level: 1
+    });
+
+    temp.push({
+        type: "material",
+        id: "POW",
+        cost: 2000,
+        level: 12
+    });
+
+    temp.push({
+        type: "estate",
+        id: "HOME",
+        cost: 20000,
+        level: 1
+    });
+
+    temp.push({
+        type: "estate",
+        id: "RESO",
+        cost: "800m",
+        level: 102
     });
 
     return temp;
