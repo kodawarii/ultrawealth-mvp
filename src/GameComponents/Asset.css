@@ -1,6 +1,6 @@
 .asset-row{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 10% 15% 35% 30% 10%;
 }
 
 .asset-row-material{
@@ -14,4 +14,25 @@
 .asset-font{
     font-weight: bold;;
     transform: scale(0.7, 0.7);
+}
+
+.with-btns{
+    border: 1px solid black;
+}
+
+.common-btn{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 50%;
+}
+
+.minus-sign-btn{
+
+}
+
+.plus-sign-btn{
+
 }

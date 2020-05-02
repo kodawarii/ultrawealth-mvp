@@ -33,9 +33,9 @@ export default class Tab extends Component  {
       <div className={rowClassNames}>
           <div className="asset-font">{data.level}</div>
           <div className="asset-font">{data.id}</div>
+          <div className="asset-font with-btns"> <button className="common-btn minus-sign-btn">-</button> 888m <button className="common-btn plus-sign-btn">+</button> </div>
+          <div className="asset-font with-btns"> <button className="common-btn minus-sign-btn">-</button> 10 <button className="common-btn plus-sign-btn">+</button> </div>
           <div className="asset-font">{data.cost}</div>
-          <div className="asset-font"> -0+ </div>
-          <div className="asset-font"> -0+ </div>
       </div>
     );
   }

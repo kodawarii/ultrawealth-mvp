@@ -37,9 +37,9 @@ export default class Tab extends Component  {
             <div className="assetListHeader">
                 <div className="asset-row-header">LEVEL</div>
                 <div className="asset-row-header">ASSET</div>
-                <div className="asset-row-header">COST</div>
                 <div className="asset-row-header">INVEST</div>
                 <div className="asset-row-header">QTY</div>
+                <div className="asset-row-header">COSTS</div>
             </div>
 
             <div>{assets}</div>

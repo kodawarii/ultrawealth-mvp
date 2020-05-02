@@ -43,6 +43,7 @@ export default class AddMenu extends Component  {
             <div className="NetInvest"> 80,000 </div>
           </div>
           <div className="mid-AddBtn"><button className="AddCellsBtn">Add Cells</button></div>
+          <div> Select Divider: h k m b t</div>
         </div>
 
         <div className="bot">
