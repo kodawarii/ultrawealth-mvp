@@ -6,7 +6,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 
-    Animation: OpenAddMenu 1s;
+    Animation: OpenAddMenu 0.5s;
 }
 
 @keyframes OpenAddMenu{

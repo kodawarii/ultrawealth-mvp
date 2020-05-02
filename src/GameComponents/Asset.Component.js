@@ -4,7 +4,7 @@ import './Asset.css';
 
 export default class Tab extends Component  {
   
-  // this.props.data.{type, id, cost, level}
+  // Asset Schema: this.props.data.{type, id, cost, level, amountToInvest}
   // this.props.key
   // this.props.index
   // this.props.addCell

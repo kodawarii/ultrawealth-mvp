@@ -11,7 +11,7 @@ export default class Main extends Component  {
 
   //this.props.openInventory
 
-  //this.props.userdata.{username, cash etc} 
+  //this.props.userdata.{username, cash, level, cellsOpen, items, assets} 
   //this.props.addCell
   //this.props.start
   //this.props.collectItems
@@ -33,8 +33,6 @@ export default class Main extends Component  {
   }
 
   render(){
-
-    
     let MainComponentsClassNames = "MainComponents";
     let AddMenuComponentClassNames = "HideAddMenuComponent";
     let TitleNavComponentClassNames = "TitleNavComponent";

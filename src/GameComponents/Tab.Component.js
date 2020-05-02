@@ -7,7 +7,7 @@ import Asset from'./Asset.Component';
 export default class Tab extends Component  {
   
   // this.props.type
-  // this.props.assets[].{type, id, cost, level}
+  // Asset[] Schema: this.props.assets[].{type, id, cost, level, amountToInvest}
 
   getAssets(){
     return this.props.assets.map((assetData, i) => {

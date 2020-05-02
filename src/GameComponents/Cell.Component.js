@@ -9,7 +9,7 @@ import './Cell.css';
 
 export default class Cell extends Component  {
   
-  // this.props.data.{type, state, progress, found}
+  // Cell Schema: this.props.data.{class, type, state, progress, found, amountInvested}
   // this.props.key = index of that data in openCells[] // cant use as props
   // this.props.index = index of that data in openCells[] // so use this instead
   // this.props.start = start() mining in App.js

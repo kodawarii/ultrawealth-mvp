@@ -1,7 +1,7 @@
 function getUserData2(){
     let data = {
         username: "ambushnike",
-        cash: 8000000000000,
+        cash: 10000,
         level: 1,
         cellsOpen: [],
         items: [],
@@ -67,28 +67,32 @@ function getMockAssets(){
         type: "material",
         id: "GOLD",
         cost: 200,
-        level: 1
+        level: 1,
+        amountToInvest: 10000
     });
 
     temp.push({
         type: "material",
-        id: "POW",
+        id: "COS",
         cost: 2000,
-        level: 12
+        level: 12,
+        amountToInvest: 200
     });
 
     temp.push({
         type: "estate",
         id: "HOME",
         cost: 20000,
-        level: 1
+        level: 1,
+        amountToInvest: 500
     });
 
     temp.push({
         type: "estate",
         id: "RESO",
         cost: "800m",
-        level: 102
+        level: 102,
+        amountToInvest: 800
     });
 
     return temp;

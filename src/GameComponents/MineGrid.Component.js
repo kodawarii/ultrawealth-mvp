@@ -7,7 +7,7 @@ import AddCell from './AddCell.Component';
 
 export default class MineGrid extends Component  {
 
-  //this.props.cellsOpen.[cellData.{type, status etc}]
+  //this.props.cellsOpen.[cellData.{class, type, state, progress, found, amountInvested}]
   //this.props.start
   //this.props.collectItems
   //this.props.openAddMenu

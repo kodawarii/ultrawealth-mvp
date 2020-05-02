@@ -4,12 +4,12 @@ import './Cell.css';
 
 export default class CellState0 extends Component  {
 
-  // this.props.data.{type, state, progress, found}
+  // Cell Schema: this.props.data.{class, type, state, progress, found, amountInvested}
   // this.props.index
   // this.props.start
 
   start(){
-    this.props.start(this.props.index, 1000);
+    this.props.start(this.props.index, this.props.data.amountInvested);
   }
 
   render(){

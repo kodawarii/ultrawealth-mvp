@@ -46,13 +46,15 @@ export default class App extends Component  {
   }
 
   addCell(data){
+    // Asset Schema: data.{type, id, cost, level}
     let currUserData = this.state.userdata;
 
     currUserData.cellsOpen.push({
       type: data.id,
       state: 0,
       progress: 0,
-      found: 0
+      found: 0,
+      amountInvested: data.amountToInvest
     });
 
     currUserData.cash -= data.cost;
