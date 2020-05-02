@@ -1,20 +1,17 @@
 .asset-row{
     display: grid;
-    grid-template-columns: 25% 45% 10% 20%;
-    padding: 0 0 8px 0;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 .asset-row-material{
-    
+
 }
 
 .asset-row-estate{
     
 }
 
-.AddAssetButton{
-    padding: 0 8px 0 8px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 50%;
-    cursor: pointer;
+.asset-font{
+    font-weight: bold;;
+    transform: scale(0.7, 0.7);
 }

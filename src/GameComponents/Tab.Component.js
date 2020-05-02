@@ -5,6 +5,8 @@ import './Tab.css'
 import Asset from'./Asset.Component';
 
 export default class Tab extends Component  {
+
+  // Tab = SKILL e.g. Material Skill
   
   // this.props.type
   // Asset[] Schema: this.props.assets[].{type, id, cost, level, amountToInvest}
@@ -33,10 +35,11 @@ export default class Tab extends Component  {
         
         <div className="assetList">
             <div className="assetListHeader">
-                <div className="asset-row-header">L E V E L</div>
-                <div className="asset-row-header">A S S E T</div>
-                <div className="asset-row-header"></div>
-                <div className="asset-row-header">C O S T</div>
+                <div className="asset-row-header">LEVEL</div>
+                <div className="asset-row-header">ASSET</div>
+                <div className="asset-row-header">COST</div>
+                <div className="asset-row-header">INVEST</div>
+                <div className="asset-row-header">QTY</div>
             </div>
 
             <div>{assets}</div>

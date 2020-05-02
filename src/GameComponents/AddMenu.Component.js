@@ -32,7 +32,20 @@ export default class AddMenu extends Component  {
           <div className="title">My Assets</div>
           <div className="exit" onClick={this.props.exitAddMenu}>✕</div>
         </div>
-        <div className="mid">
+        
+        <div className="mid">  
+          <div className="mid-table">
+            <div> Current Cash </div>
+            <div> 200,000 </div>
+            <div> Total to Invest </div>
+            <div> 120,000 </div>
+            <div> NET </div>
+            <div className="NetInvest"> 80,000 </div>
+          </div>
+          <div className="mid-AddBtn"><button className="AddCellsBtn">Add Cells</button></div>
+        </div>
+
+        <div className="bot">
           <Tab type="History" addCell={this.props.addCell} />
           <Tab type="Material Skills" assets={materialAssets} addCell={this.props.addCell} />
           <Tab type="Estate Skills" assets={estateAssets} addCell={this.props.addCell} />
