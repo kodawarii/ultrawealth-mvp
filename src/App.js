@@ -57,7 +57,7 @@ export default class App extends Component  {
       found: 0
     });
 
-    currUserData.cash -= data.price;
+    currUserData.cash -= data.cost;
     
     this.setState({userdata: currUserData});
   }

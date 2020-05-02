@@ -65,7 +65,7 @@ function getMockAssets(){
 
     temp.push({
         type: "material",
-        id: "GLD",
+        id: "GOLD",
         cost: 200,
         level: 1
     });
