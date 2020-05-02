@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ultrawealth-mvp/precache-manifest.711b9b9e2058d4262afef783608c2665.js"
+  "/ultrawealth-mvp/precache-manifest.a792e26de58b512c97d172fa35b938bc.js"
 );
 
 self.addEventListener('message', (event) => {
