@@ -8,8 +8,6 @@ import Inventory from './ScreenComponents/Inventory.Component';
 // Mock Data
 import getUserData from './MockData/user1';
 import getUserData2 from './MockData/user2';
-import mine1 from './MockData/mining1';
-import mine2 from './MockData/mining2';
 
 export default class App extends Component  {
   constructor(props){
