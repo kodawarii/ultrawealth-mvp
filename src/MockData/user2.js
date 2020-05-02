@@ -1,7 +1,7 @@
 function getUserData2(){
     let data = {
         username: "ambushnike",
-        cash: 8000,
+        cash: 8000000000000,
         level: 1,
         cellsOpen: [],
         items: [],

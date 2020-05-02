@@ -3,16 +3,14 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 import './DataDisplay.css';
 
+import * as functions from '../Helpers/Functions';
+
 //@TODO: Move buttons out into separate component, makes no sense to have it within DataDisplay component
 
 export default class DataDisplay extends Component  {
 
   // this.props.cash
   // this.props.openInventory
-
-  numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
 
   openInventory(){
     this.props.openInventory();
@@ -25,7 +23,8 @@ export default class DataDisplay extends Component  {
           <ul className="DataDisplay-1Data-ul">
             <li className="cash">
                 <div className="DataDisplay-Header">Cash</div>
-                <div className="DataDisplay-Figure">${this.numberWithCommas(this.props.cash)}</div> 
+                <div className="DataDisplay-Figure">${functions.numberWithCommas(this.props.cash)}</div> 
+                <div className="DataDisplay-Figure">${functions.convertLongNum(this.props.cash)}</div> 
                 <div className="DataDisplay-Figure2"> +$500 (+5.04%) </div>
             </li>
           </ul>
