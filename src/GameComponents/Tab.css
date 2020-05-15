@@ -5,7 +5,7 @@
 
 .assetListHeader{
     display: grid;
-    grid-template-columns: 10% 15% 35% 30% 10%;
+    grid-template-columns: 10% 12% 38% 30% 10%;
 }
 
 .asset-row-header{

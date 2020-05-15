@@ -9,6 +9,10 @@
     Animation: OpenAddMenu 0.5s;
 }
 
+.number{
+    font-family: 'Cutive Mono', monospace;
+}
+
 @keyframes OpenAddMenu{
     0%{
         opacity: 0;

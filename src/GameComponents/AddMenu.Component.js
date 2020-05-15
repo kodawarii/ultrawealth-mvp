@@ -36,11 +36,11 @@ export default class AddMenu extends Component  {
         <div className="mid">  
           <div className="mid-table">
             <div> Current Cash </div>
-            <div> 200,000 </div>
+            <div className="number"> ${this.props.userdata.cash} </div>
             <div> Total to Invest </div>
-            <div> 120,000 </div>
-            <div> NET </div>
-            <div className="NetInvest"> 80,000 </div>
+            <div className="number"> $120,000 </div>
+            <div> NET Cash </div>
+            <div className="NetInvest number"> $80,000 </div>
           </div>
           <div className="mid-AddBtn"><button className="AddCellsBtn">Add Cells</button></div>
           <div> Select Divider: h k m b t</div>

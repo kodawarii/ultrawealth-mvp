@@ -11,11 +11,71 @@ export default class Tab extends Component  {
   // this.props.index
   // this.props.addCell // <div><span className=" AddAssetButton" onClick={this.addCell.bind(this, data)}>+</span></div> :: now deprecated
 
+  constructor(props){
+    super(props);
+
+    this.state = {
+      isMinusInvestDisabled: false,
+      isMinusQtyDisabled: false,
+      isAddInvestDisabled: false,
+      isAddQtyDisabled: false,
+      invest: 100,
+      qty: 1
+    }
+  }
+
+  updateInvestBtnStatus(){
+    if(this.state.invest < 200) this.setState({isMinusInvestDisabled: true});
+    else this.setState({isMinusInvestDisabled: false});
+  }
+
+  updateQtyBtnStatus(){
+    if(this.state.qty < 2) this.setState({isMinusQtyDisabled: true});
+    else this.setState({isMinusQtyDisabled: false});
+  }
+
+  minusQty(){
+    let curr = this.state.qty;
+    this.setState({qty: --curr});
+
+    this.updateQtyBtnStatus();
+  }
+
+  minusInvest(val){
+    let curr = this.state.invest;
+    this.setState({invest: curr - val});
+
+    this.updateInvestBtnStatus();
+  }
+
+  addQty(){
+    let curr = this.state.qty;
+    this.setState({qty: ++curr});
+
+    this.updateQtyBtnStatus();
+  }
+
+  addInvest(val){
+    let curr = this.state.invest;
+    this.setState({invest: curr + val});
+
+    this.updateInvestBtnStatus();
+  }
+
   addCell(data){    
     this.props.addCell(data);
   }
 
   render(){
+    let commonBtnClassNames = "common-btn ";
+    let minusBtnClassNames = "minus-sign-btn ";
+    let addBtnClassNames = "add-sign-btn "
+
+    let minusInvestBtnClassNames = commonBtnClassNames + minusBtnClassNames;
+    let minusQtyBtnClassNames = commonBtnClassNames + minusBtnClassNames;
+    let addInvestBtnClassNames = commonBtnClassNames + addBtnClassNames;
+    let addQtyBtnClassNames = commonBtnClassNames + addBtnClassNames;
+
     let data, rowClassNames="asset-row";
     if(this.props.data!==undefined){
         data = this.props.data;
@@ -33,9 +93,17 @@ export default class Tab extends Component  {
       <div className={rowClassNames}>
           <div className="asset-font">{data.level}</div>
           <div className="asset-font">{data.id}</div>
-          <div className="asset-font with-btns"> <button className="common-btn minus-sign-btn">-</button> 888m <button className="common-btn plus-sign-btn">+</button> </div>
-          <div className="asset-font with-btns"> <button className="common-btn minus-sign-btn">-</button> 10 <button className="common-btn plus-sign-btn">+</button> </div>
-          <div className="asset-font">{data.cost}</div>
+          <div className="asset-font with-btns number"> 
+            <button disabled={this.state.isMinusInvestDisabled} className={minusInvestBtnClassNames} onClick={this.minusInvest.bind(this, 100)}>-</button> 
+            &nbsp;${this.state.invest}&nbsp;
+            <button className={addInvestBtnClassNames} onClick={this.addInvest.bind(this, 100)}>+</button> 
+          </div>
+          <div className="asset-font with-btns"> 
+            <button disabled={this.state.isMinusQtyDisabled} className={minusQtyBtnClassNames} onClick={this.minusQty.bind(this)}>-</button> 
+            &nbsp;{this.state.qty}&nbsp;
+            <button className={addQtyBtnClassNames} onClick={this.addQty.bind(this)}>+</button> 
+          </div>
+          <div className="asset-font number">${data.cost}</div>
       </div>
     );
   }

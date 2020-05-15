@@ -1,6 +1,6 @@
 .asset-row{
     display: grid;
-    grid-template-columns: 10% 15% 35% 30% 10%;
+    grid-template-columns: 10% 12% 38% 30% 10%;
 }
 
 .asset-row-material{
@@ -17,7 +17,7 @@
 }
 
 .with-btns{
-    border: 1px solid black;
+    
 }
 
 .common-btn{
@@ -33,6 +33,6 @@
 
 }
 
-.plus-sign-btn{
+.add-sign-btn{
 
 }
