@@ -1,14 +1,17 @@
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Update Node: 
 	npm install npm@latest -g
 Use Latest React: 
 	npm uninstall -g create-react-app
 	npx create-react-app my-app
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 How to Horizontally and Vertically align div inside a div:
 https://levelup.gitconnected.com/10-ways-to-center-a-div-horizontally-and-vertically-in-css-53ca5eb912db
  - Flex
  - Grid
  
+ // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  Deploy to gh-pages:
  https://blog.usejournal.com/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e
 	- npm install gh-pages --save-dev
@@ -19,3 +22,9 @@ https://levelup.gitconnected.com/10-ways-to-center-a-div-horizontally-and-vertic
 	
 	- npm run deploy
 	- If needed, go to repo > Settings > GitHub Pages > Source > gh-pages branch
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Disable HTML zoom in:
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
