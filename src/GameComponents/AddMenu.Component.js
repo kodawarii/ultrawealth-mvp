@@ -14,35 +14,8 @@ export default class AddMenu extends Component  {
     super(props);
 
     this.state = {
-      cart: [],
-      totalInvest: 0
-    }
-  }
 
-  updateCart(actionT, cell, cellType){
-    console.log("Before: ");
-    console.log(this.state.cart);
-
-    let curr = this.state.cart;
-    if(actionT === "add"){
-      curr.push(cell);
-      this.setState({cart: curr});
     }
-    else if(actionT == "minus"){
-      curr.splice(0, 1);
-      this.setState({cart: curr});
-    }
-    else{
-      console.log("> Cant do that transaction");
-    }
-
-    console.log("");
-    console.log("After: ");
-    console.log(this.state.cart);
-  }
-
-  updateTotal(val){
-    this.setState({totalInvest: val});
   }
 
   render(){
@@ -74,13 +47,7 @@ export default class AddMenu extends Component  {
           <div className="mid-table">
             <div> Current Cash </div>
             <div className="number"> ${this.props.userdata.cash} </div>
-            <div> Total to Invest </div>
-            <div className="number"> ${this.state.totalInvest} </div>
-            <div> NET Cash </div>
-            <div className="NetInvest number"> ${this.props.userdata.cash - this.state.totalInvest} </div>
           </div>
-          <div className="mid-AddBtn"><button className="AddCellsBtn">Add Cells ({this.state.cart.length}) </button></div>
-          <div> Select Divider: h k m b t</div>
         </div>
 
         <div className="bot">
@@ -92,15 +59,13 @@ export default class AddMenu extends Component  {
             type="Material Skills" 
             assets={materialAssets} 
             addCell={this.props.addCell} 
-            updateTotal={this.updateTotal.bind(this)} 
-            updateCart={this.updateCart.bind(this)}/>
+            />
 
           <Tab 
             type="Estate Skills" 
             assets={estateAssets} 
-            addCell={this.props.addCell} 
-            updateTotal={this.updateTotal.bind(this)} 
-            updateCart={this.updateCart.bind(this)}/>
+            addCell={this.props.addCell}
+            />
 
         </div>
       </div>

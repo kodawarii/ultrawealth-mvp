@@ -11,8 +11,6 @@ export default class Tab extends Component  {
   // this.props.type
   // Asset[] Schema: this.props.assets[].{type, id, cost, level, amountToInvest}
   // this.props.addCell
-  // this.props.updateTotal
-  // this.props.updateCart
 
   getAssets(){
     return this.props.assets.map((assetData, i) => {
@@ -21,8 +19,6 @@ export default class Tab extends Component  {
         key={i}
         index={i}
         addCell={this.props.addCell}
-        updateTotal={this.props.updateTotal}
-        updateCart={this.props.updateCart}
         />;
     });
   }
@@ -42,9 +38,8 @@ export default class Tab extends Component  {
             <div className="assetListHeader">
                 <div className="asset-row-header">LEVEL</div>
                 <div className="asset-row-header">ASSET</div>
-                <div className="asset-row-header">INVEST</div>
-                <div className="asset-row-header">QTY</div>
                 <div className="asset-row-header">COST</div>
+                <div className="asset-row-header"> </div>
             </div>
 
             <div>{assets}</div>

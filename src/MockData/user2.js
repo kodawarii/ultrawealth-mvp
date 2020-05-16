@@ -68,31 +68,31 @@ function getMockAssets(){
         id: "GOLD",
         cost: 200,
         level: 1,
-        amountToInvest: 10000
+        amountToInvest: 0
     });
 
     temp.push({
         type: "material",
         id: "COS",
-        cost: 2000,
+        cost: 9000,
         level: 12,
-        amountToInvest: 200
+        amountToInvest: 0
     });
 
     temp.push({
         type: "estate",
         id: "HOME",
-        cost: 20000,
+        cost: 36000,
         level: 1,
-        amountToInvest: 500
+        amountToInvest: 0
     });
 
     temp.push({
         type: "estate",
         id: "RESO",
-        cost: "800m",
+        cost: 375000,
         level: 102,
-        amountToInvest: 800
+        amountToInvest: 0
     });
 
     return temp;

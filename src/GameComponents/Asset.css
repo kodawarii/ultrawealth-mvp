@@ -1,23 +1,11 @@
 .asset-row{
     display: grid;
-    grid-template-columns: 10% 12% 38% 30% 10%;
-}
-
-.asset-row-material{
-
-}
-
-.asset-row-estate{
-    
+    grid-template-columns: 25% 25% 25% 25% 25%;
 }
 
 .asset-font{
     font-weight: bold;;
     transform: scale(0.7, 0.7);
-}
-
-.with-btns{
-    
 }
 
 .common-btn{
@@ -27,12 +15,4 @@
     background: none;
     border: 1px solid rgba(0, 0, 0, 0.178);
     border-radius: 50%;
-}
-
-.minus-sign-btn{
-
-}
-
-.add-sign-btn{
-
 }
