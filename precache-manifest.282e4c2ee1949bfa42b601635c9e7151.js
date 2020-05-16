@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0efefd4acdaf4f7c3c07d79b3edf7331",
+    "revision": "b738662ae13ddbf1375e6b8dfb66eec1",
     "url": "/ultrawealth-mvp/index.html"
   },
   {
-    "revision": "999f743ef2baabd73bed",
-    "url": "/ultrawealth-mvp/static/css/main.0f1790df.chunk.css"
+    "revision": "43f1d3bd2471b7e99ae2",
+    "url": "/ultrawealth-mvp/static/css/main.91c4e161.chunk.css"
   },
   {
     "revision": "0591307e644aa70b8cff",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ultrawealth-mvp/static/js/2.ae3a1683.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "999f743ef2baabd73bed",
-    "url": "/ultrawealth-mvp/static/js/main.8fe8377a.chunk.js"
+    "revision": "43f1d3bd2471b7e99ae2",
+    "url": "/ultrawealth-mvp/static/js/main.1013ca56.chunk.js"
   },
   {
     "revision": "2f68685714a969bccd24",
