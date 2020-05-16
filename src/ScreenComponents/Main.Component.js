@@ -6,6 +6,7 @@ import TitleNav from '../DisplayComponents/TitleNav.Component';
 import DataDisplay from '../GameComponents/DataDisplay.Component';
 import MineGrid from '../GameComponents/MineGrid.Component';
 import AddMenu from '../GameComponents/AddMenu.Component';
+import EnrichMenu from '../GameComponents/EnrichMenu.Component';
 
 export default class Main extends Component  {
 
@@ -20,30 +21,63 @@ export default class Main extends Component  {
     super(props);
 
     this.state = {
-      isAddMenuOpen: false
+      cart: [],
+      isAddMenuOpen: false,
+      isEnrichMenuOpen: false
     }
+  }
+
+  removeFromCart(){
+    let list = [];
+    this.setState({cart: list});
+  }
+
+  addToCart(assetData){
+    let list = [];
+    list.push(assetData);
+    this.setState({cart: list});
+  }
+
+  openEnrichMenu(){
+    this.setState({isEnrichMenuOpen: true});
+    this.setState({isAddMenuOpen: false});
+  }
+
+  exitEnrichMenu(){
+    this.setState({isEnrichMenuOpen: false});
+    this.setState({isAddMenuOpen: false});
   }
 
   openAddMenu(){
     this.setState({isAddMenuOpen: true});
+    this.setState({isEnrichMenuOpen: false});
   }
 
   exitAddMenu(){
     this.setState({isAddMenuOpen: false});
+    this.setState({isEnrichMenuOpen: false});
   }
 
   render(){
-    let MainComponentsClassNames = "MainComponents";
-    let AddMenuComponentClassNames = "HideAddMenuComponent";
-    let TitleNavComponentClassNames = "TitleNavComponent";
+    let MainComponentsClassNames = "MainComponents ";
+    let AddMenuComponentClassNames = "HideAddMenuComponent ";
+    let EnrichMenuComponentClassNames= "HideEnrichMenuComponent ";
+    let TitleNavComponentClassNames = "TitleNavComponent ";
 
     if(this.state.isAddMenuOpen){
-      MainComponentsClassNames = "HideMainComponents";
-      AddMenuComponentClassNames = "AddMenuComponent";
+      EnrichMenuComponentClassNames= "HideEnrichMenuComponent ";
+      MainComponentsClassNames = "HideMainComponents ";
+      AddMenuComponentClassNames = "AddMenuComponent ";
+    }
+    else if(this.state.isEnrichMenuOpen){
+      MainComponentsClassNames = "HideMainComponents ";
+      AddMenuComponentClassNames = "HideAddMenuComponent ";
+      EnrichMenuComponentClassNames= "EnrichMenuComponent ";
     }
     else{
-      MainComponentsClassNames = "MainComponents";
-      AddMenuComponentClassNames = "HideAddMenuComponent";
+      AddMenuComponentClassNames = "HideAddMenuComponent ";
+      EnrichMenuComponentClassNames= "HideEnrichMenuComponent ";
+      MainComponentsClassNames = "MainComponents ";
     }
 
     return (
@@ -56,7 +90,6 @@ export default class Main extends Component  {
         <div className={MainComponentsClassNames}>
           <DataDisplay 
           cash={this.props.userdata.cash}
-          openInventory={this.props.openInventory}
           />
           
           <MineGrid 
@@ -71,6 +104,19 @@ export default class Main extends Component  {
           <AddMenu
           userdata={this.props.userdata}
           exitAddMenu={this.exitAddMenu.bind(this)}
+          //addCell={this.props.addCell}
+          openEnrichMenu={this.openEnrichMenu.bind(this)}
+          addToCart={this.addToCart.bind(this)}
+          />
+        </div>
+
+        <div className={EnrichMenuComponentClassNames}>
+          <EnrichMenu
+          userdata={this.props.userdata}
+          exitEnrichMenu={this.exitEnrichMenu.bind(this)}
+          openAddMenu={this.openAddMenu.bind(this)}
+          removeFromCart={this.removeFromCart.bind(this)}
+          dataList={this.state.cart}
           addCell={this.props.addCell}
           />
         </div>

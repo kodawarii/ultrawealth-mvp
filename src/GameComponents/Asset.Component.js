@@ -9,7 +9,9 @@ export default class Tab extends Component  {
   // Asset Schema: this.props.data.{type, id, cost, level, amountToInvest}
   // this.props.key
   // this.props.index
-  // this.props.addCell // <div><span className=" AddAssetButton" onClick={this.addCell.bind(this, data)}>+</span></div> :: now deprecated
+  //// this.props.addCell // <div><span className=" AddAssetButton" onClick={this.addCell.bind(this, data)}>+</span></div> :: now deprecated
+  // this.props.openEnrichMenu
+  // this.props.addToCart
 
   constructor(props){
     super(props);
@@ -21,6 +23,11 @@ export default class Tab extends Component  {
 
   addCell(data){    
     this.props.addCell(data);
+  }
+
+  selectAsset(){
+    this.props.openEnrichMenu();
+    this.props.addToCart(this.props.data);
   }
 
   render(){
@@ -42,7 +49,7 @@ export default class Tab extends Component  {
           <div className="DATA_LEVEL asset-font">{data.level}</div>
           <div className="DATA_ID asset-font">{data.id}</div>
           <div className="DATA_COST asset-font number">${data.cost}</div>
-          <div className="SELECT_BUTTON asset-font"><button> Select </button> </div>
+          <div className="SELECT_BUTTON asset-font"><button onClick={this.selectAsset.bind(this)}> Select </button> </div>
       </div>
     );
   }

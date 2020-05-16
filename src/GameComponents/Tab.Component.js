@@ -11,6 +11,8 @@ export default class Tab extends Component  {
   // this.props.type
   // Asset[] Schema: this.props.assets[].{type, id, cost, level, amountToInvest}
   // this.props.addCell
+  // this.props.openEnrichMenu
+  // this.props.addToCart
 
   getAssets(){
     return this.props.assets.map((assetData, i) => {
@@ -18,7 +20,9 @@ export default class Tab extends Component  {
         data={assetData} 
         key={i}
         index={i}
-        addCell={this.props.addCell}
+        //addCell={this.props.addCell}
+        openEnrichMenu={this.props.openEnrichMenu}
+        addToCart={this.props.addToCart}
         />;
     });
   }

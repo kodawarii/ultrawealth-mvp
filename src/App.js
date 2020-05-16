@@ -46,7 +46,7 @@ export default class App extends Component  {
   }
 
   addCell(data){
-    // Asset Schema: data.{type, id, cost, level}
+    // Asset Schema: data.{type, id, cost, level, amountToInvest}
     let currUserData = this.state.userdata;
 
     currUserData.cellsOpen.push({
@@ -60,10 +60,6 @@ export default class App extends Component  {
     currUserData.cash -= data.cost;
     
     this.setState({userdata: currUserData});
-  }
-
-  openInventory(){
-    console.log("Inventory Open");
   }
 
   collectItems(index, name, value){
@@ -94,8 +90,6 @@ export default class App extends Component  {
             component={ 
               () => 
               <Main 
-              openInventory={this.openInventory.bind(this)}
-
               userdata={this.state.userdata} 
               start={this.start.bind(this)}
               collectItems={this.collectItems.bind(this)}

@@ -10,11 +10,6 @@ import * as functions from '../Helpers/Functions';
 export default class DataDisplay extends Component  {
 
   // this.props.cash
-  // this.props.openInventory
-
-  openInventory(){
-    this.props.openInventory();
-  }
 
   render(){
     return (
@@ -31,7 +26,7 @@ export default class DataDisplay extends Component  {
         </div>        
         <div className="DataDisplay-2Buttons">
           <ul className="DataDisplay-2Buttons-ul">
-            <li><Link to={'/inventory'}><button className="DataDisplay-btn" onClick={this.openInventory.bind(this)}> Inventory </button></Link></li>
+            <li><Link to={'/inventory'}><button className="DataDisplay-btn"> Inventory </button></Link></li>
             <li><button className="DataDisplay-btn"> Equips </button></li>
             <li><button className="DataDisplay-btn"> Assets </button></li>
             <li><button className="DataDisplay-btn"> SHOP </button></li>

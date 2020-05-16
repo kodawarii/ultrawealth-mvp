@@ -1,0 +1,39 @@
+.EnrichMenu{
+    display: inline-block;
+    width: 300px;
+    margin: 30px 20px 30px 20px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+
+    Animation: OpenAddMenu 0.5s;
+}
+
+.EnrichMenu-Top{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.EnrichMenu-Mid-currentCash{
+    padding: 12px 0 12px 0;
+}
+
+.EnrichMenu-Mid-assetDetails{
+    padding: 12px 0 12px 0;
+}
+
+.dummyBox{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-radius: 8px;
+}
+
+.EnrichMenu-Mid-investAmount{
+    padding: 10px 0 10px 0;
+}
+
+.EnrichMenu-Mid-AddBtn{
+    padding: 20px 0 12px 0;
+}

@@ -25,7 +25,7 @@
     }
 }
 
-.top{
+.AddMenu-top{
     display: grid;
     grid-template-columns: 90% 10%;
 }
@@ -52,7 +52,7 @@
     }
 }
 
-.mid{
+.AddMenu-mid{
     padding: 20px 0 20px 0;
 }
 
@@ -89,7 +89,7 @@
     color: rgba(255, 255, 255, 0.85);
 }
 
-.bot{
+.AddMenu-bot{
     margin: 8px;
 }
 

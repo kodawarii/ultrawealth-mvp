@@ -9,6 +9,8 @@ export default class AddMenu extends Component  {
   // this.props.userdata.{username, cash, level, cellsOpen, items, assets}
   // this.props.exitAddMenu
   // this.props.addCell
+  // this.props.openEnrichMenu
+  // this.props.addToCart
 
   constructor(props){
     super(props);
@@ -38,19 +40,19 @@ export default class AddMenu extends Component  {
 
     return (
       <div className="AddMenu"> 
-        <div className="top">
+        <div className="AddMenu-top">
           <div className="title">My Assets</div>
           <div className="exit" onClick={this.props.exitAddMenu}>✕</div>
         </div>
         
-        <div className="mid">  
+        <div className="AddMenu-mid">  
           <div className="mid-table">
             <div> Current Cash </div>
             <div className="number"> ${this.props.userdata.cash} </div>
           </div>
         </div>
 
-        <div className="bot">
+        <div className="AddMenu-bot">
           <Tab 
             type="History" 
             addCell={this.props.addCell} />
@@ -58,13 +60,17 @@ export default class AddMenu extends Component  {
           <Tab 
             type="Material Skills" 
             assets={materialAssets} 
-            addCell={this.props.addCell} 
+            //addCell={this.props.addCell}
+            openEnrichMenu={this.props.openEnrichMenu}
+            addToCart={this.props.addToCart}
             />
 
           <Tab 
             type="Estate Skills" 
             assets={estateAssets} 
-            addCell={this.props.addCell}
+            //addCell={this.props.addCell}
+            openEnrichMenu={this.props.openEnrichMenu}
+            addToCart={this.props.addToCart}
             />
 
         </div>
